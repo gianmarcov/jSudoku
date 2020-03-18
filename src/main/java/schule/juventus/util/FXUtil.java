@@ -9,8 +9,18 @@ import schule.juventus.AbstractController;
 
 import java.io.IOException;
 
+/**
+ * JavaFX util.
+ */
 public class FXUtil {
 
+    /**
+     * Gets scene from fxml.
+     *
+     * @param name         the name
+     * @param primaryStage the primary stage
+     * @return the scene from fxml
+     */
     public static Scene getSceneFromFXML(final String name, final Stage primaryStage) {
         Parent parent = new Pane();
         try {

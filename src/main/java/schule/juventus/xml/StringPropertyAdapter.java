@@ -5,6 +5,9 @@ import javafx.beans.property.StringProperty;
 
 import javax.xml.bind.annotation.adapters.XmlAdapter;
 
+/**
+ * The type String property adapter.
+ */
 public class StringPropertyAdapter extends XmlAdapter<String, StringProperty> {
 
     @Override

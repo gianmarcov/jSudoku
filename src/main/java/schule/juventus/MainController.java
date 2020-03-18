@@ -1,21 +1,27 @@
 package schule.juventus;
 
 import javafx.scene.Scene;
-import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 import org.apache.log4j.Logger;
 import schule.juventus.util.FXUtil;
 
-import java.io.File;
-
+/**
+ * Main controller.
+ */
 public class MainController extends AbstractController {
     final static Logger logger = Logger.getLogger(MainController.class);
 
 
+    /**
+     * Initialize.
+     */
     public void initialize() {
         logger.info(this.getClass().getName()+" initialized");
     }
 
+    /**
+     * Start.
+     */
     public void start() {
         final Scene sudokuScene = FXUtil.getSceneFromFXML("sudoku", getStage());
         final Stage stage = getStage();
@@ -25,6 +31,9 @@ public class MainController extends AbstractController {
         stage.setScene(sudokuScene);
     }
 
+    /**
+     * Exit.
+     */
     public void exit() {
         System.exit(0);
     }

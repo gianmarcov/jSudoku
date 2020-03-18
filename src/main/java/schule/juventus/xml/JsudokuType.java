@@ -6,9 +6,9 @@ import javax.xml.bind.annotation.*;
 
 /**
  * <p>Java class for jsudokuType complex type.
- * 
+ *
  * <p>The following schema fragment specifies the expected content contained within this class.
- * 
+ *
  * <pre>
  * &lt;complexType name="jsudokuType">
  *   &lt;complexContent>
@@ -28,8 +28,6 @@ import javax.xml.bind.annotation.*;
  *   &lt;/complexContent>
  * &lt;/complexType>
  * </pre>
- * 
- * 
  */
 @XmlRootElement(name="jsudoku")
 @XmlAccessorType(XmlAccessType.FIELD)
@@ -46,32 +44,56 @@ import javax.xml.bind.annotation.*;
 })
 public class JsudokuType {
 
+    /**
+     * The Group 0.
+     */
     @XmlElement(required = true)
     protected Group0Type group0;
+    /**
+     * The Group 1.
+     */
     @XmlElement(required = true)
     protected Group1Type group1;
+    /**
+     * The Group 2.
+     */
     @XmlElement(required = true)
     protected Group2Type group2;
+    /**
+     * The Group 3.
+     */
     @XmlElement(required = true)
     protected Group3Type group3;
+    /**
+     * The Group 4.
+     */
     @XmlElement(required = true)
     protected Group4Type group4;
+    /**
+     * The Group 5.
+     */
     @XmlElement(required = true)
     protected Group5Type group5;
+    /**
+     * The Group 6.
+     */
     @XmlElement(required = true)
     protected Group6Type group6;
+    /**
+     * The Group 7.
+     */
     @XmlElement(required = true)
     protected Group7Type group7;
+    /**
+     * The Group 8.
+     */
     @XmlElement(required = true)
     protected Group8Type group8;
 
     /**
      * Gets the value of the group0 property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link Group0Type }
-     *     
+     *
+     * @return possible      object is     {@link Group0Type }
      */
     public Group0Type getGroup0() {
         return group0;
@@ -79,11 +101,8 @@ public class JsudokuType {
 
     /**
      * Sets the value of the group0 property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link Group0Type }
-     *     
+     *
+     * @param value allowed object is     {@link Group0Type }
      */
     public void setGroup0(Group0Type value) {
         this.group0 = value;
@@ -91,11 +110,8 @@ public class JsudokuType {
 
     /**
      * Gets the value of the group1 property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link Group1Type }
-     *     
+     *
+     * @return possible      object is     {@link Group1Type }
      */
     public Group1Type getGroup1() {
         return group1;
@@ -103,11 +119,8 @@ public class JsudokuType {
 
     /**
      * Sets the value of the group1 property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link Group1Type }
-     *     
+     *
+     * @param value allowed object is     {@link Group1Type }
      */
     public void setGroup1(Group1Type value) {
         this.group1 = value;
@@ -115,11 +128,8 @@ public class JsudokuType {
 
     /**
      * Gets the value of the group2 property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link Group2Type }
-     *     
+     *
+     * @return possible      object is     {@link Group2Type }
      */
     public Group2Type getGroup2() {
         return group2;
@@ -127,11 +137,8 @@ public class JsudokuType {
 
     /**
      * Sets the value of the group2 property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link Group2Type }
-     *     
+     *
+     * @param value allowed object is     {@link Group2Type }
      */
     public void setGroup2(Group2Type value) {
         this.group2 = value;
@@ -139,11 +146,8 @@ public class JsudokuType {
 
     /**
      * Gets the value of the group3 property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link Group3Type }
-     *     
+     *
+     * @return possible      object is     {@link Group3Type }
      */
     public Group3Type getGroup3() {
         return group3;
@@ -151,11 +155,8 @@ public class JsudokuType {
 
     /**
      * Sets the value of the group3 property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link Group3Type }
-     *     
+     *
+     * @param value allowed object is     {@link Group3Type }
      */
     public void setGroup3(Group3Type value) {
         this.group3 = value;
@@ -163,11 +164,8 @@ public class JsudokuType {
 
     /**
      * Gets the value of the group4 property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link Group4Type }
-     *     
+     *
+     * @return possible      object is     {@link Group4Type }
      */
     public Group4Type getGroup4() {
         return group4;
@@ -175,11 +173,8 @@ public class JsudokuType {
 
     /**
      * Sets the value of the group4 property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link Group4Type }
-     *     
+     *
+     * @param value allowed object is     {@link Group4Type }
      */
     public void setGroup4(Group4Type value) {
         this.group4 = value;
@@ -187,11 +182,8 @@ public class JsudokuType {
 
     /**
      * Gets the value of the group5 property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link Group5Type }
-     *     
+     *
+     * @return possible      object is     {@link Group5Type }
      */
     public Group5Type getGroup5() {
         return group5;
@@ -199,11 +191,8 @@ public class JsudokuType {
 
     /**
      * Sets the value of the group5 property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link Group5Type }
-     *     
+     *
+     * @param value allowed object is     {@link Group5Type }
      */
     public void setGroup5(Group5Type value) {
         this.group5 = value;
@@ -211,11 +200,8 @@ public class JsudokuType {
 
     /**
      * Gets the value of the group6 property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link Group6Type }
-     *     
+     *
+     * @return possible      object is     {@link Group6Type }
      */
     public Group6Type getGroup6() {
         return group6;
@@ -223,11 +209,8 @@ public class JsudokuType {
 
     /**
      * Sets the value of the group6 property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link Group6Type }
-     *     
+     *
+     * @param value allowed object is     {@link Group6Type }
      */
     public void setGroup6(Group6Type value) {
         this.group6 = value;
@@ -235,11 +218,8 @@ public class JsudokuType {
 
     /**
      * Gets the value of the group7 property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link Group7Type }
-     *     
+     *
+     * @return possible      object is     {@link Group7Type }
      */
     public Group7Type getGroup7() {
         return group7;
@@ -247,11 +227,8 @@ public class JsudokuType {
 
     /**
      * Sets the value of the group7 property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link Group7Type }
-     *     
+     *
+     * @param value allowed object is     {@link Group7Type }
      */
     public void setGroup7(Group7Type value) {
         this.group7 = value;
@@ -259,11 +236,8 @@ public class JsudokuType {
 
     /**
      * Gets the value of the group8 property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link Group8Type }
-     *     
+     *
+     * @return possible      object is     {@link Group8Type }
      */
     public Group8Type getGroup8() {
         return group8;
@@ -271,11 +245,8 @@ public class JsudokuType {
 
     /**
      * Sets the value of the group8 property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link Group8Type }
-     *     
+     *
+     * @param value allowed object is     {@link Group8Type }
      */
     public void setGroup8(Group8Type value) {
         this.group8 = value;

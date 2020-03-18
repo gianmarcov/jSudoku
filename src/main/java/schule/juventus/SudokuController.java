@@ -1,6 +1,5 @@
 package schule.juventus;
 
-import com.sun.javafx.scene.traversal.Direction;
 import javafx.fxml.FXML;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
@@ -22,13 +21,47 @@ import java.util.ArrayList;
 import java.util.List;
 
 
+/**
+ * Sudoku controller.
+ */
 public class SudokuController extends AbstractController {
+    /**
+     * The constant TRUE as string
+     */
     final static String TRUE = "true";
+    /**
+     * The constant BINDED_FIELD.
+     */
     final static String BINDED_FIELD = "BINDED_FIELD";
+    /**
+     * The constant ROW_INDEX.
+     */
     final static String ROW_INDEX = "ROW_INDEX";
+    /**
+     * The constant COLUMN_INDEX.
+     */
     final static String COLUMN_INDEX = "COLUMN_INDEX";
+    /**
+     * The constant CONSTANT_FIELD.
+     */
     final static String CONSTANT_FIELD = "CONSTANT_FIELD";
+
     final static Logger logger = Logger.getLogger(SudokuController.class);
+
+    /**
+     * The constant table, represents the coordinates of the Labels in the list
+     */
+    final static int[][] table = {
+            {0, 1, 2, 9, 10, 11, 18, 19, 20},
+            {3, 4, 5, 12, 13, 14, 21, 22, 23},
+            {6, 7, 8, 15, 16, 17, 24, 25, 26},
+            {27, 28, 29, 36, 37, 38, 45, 46, 47},
+            {30, 31, 32, 39, 40, 41, 48, 49, 50},
+            {33, 34, 35, 42, 43, 44, 51, 52, 53},
+            {54, 55, 56, 63, 64, 65, 72, 73, 74},
+            {57, 58, 59, 66, 67, 68, 75, 76, 77},
+            {60, 61, 62, 69, 70, 71, 78, 79, 80}
+    };
 
     @FXML
     private Label labelOfGroup0Field0;
@@ -207,18 +240,9 @@ public class SudokuController extends AbstractController {
 
     private JsudokuType jsudoku;
 
-    private int[][] table = {
-            {0, 1, 2, 9, 10, 11, 18, 19, 20},
-            {3, 4, 5, 12, 13, 14, 21, 22, 23},
-            {6, 7, 8, 15, 16, 17, 24, 25, 26},
-            {27, 28, 29, 36, 37, 38, 45, 46, 47},
-            {30, 31, 32, 39, 40, 41, 48, 49, 50},
-            {33, 34, 35, 42, 43, 44, 51, 52, 53},
-            {54, 55, 56, 63, 64, 65, 72, 73, 74},
-            {57, 58, 59, 66, 67, 68, 75, 76, 77},
-            {60, 61, 62, 69, 70, 71, 78, 79, 80}
-    };
-
+    /**
+     * Initialize.
+     */
     public void initialize() {
     }
 
@@ -256,6 +280,13 @@ public class SudokuController extends AbstractController {
         });
     }
 
+    /**
+     * bind view to model
+     * @param label
+     * @param fieldType
+     * @param row
+     * @param column
+     */
     private void bind(final Label label, final FieldType fieldType, final int row, final int column) {
         final boolean isConstant = fieldType.getPredefined().get().equalsIgnoreCase(TRUE);
 
@@ -278,6 +309,9 @@ public class SudokuController extends AbstractController {
         this.labels.add(label);
     }
 
+    /**
+     * reset all fields that are not an constant field
+     */
     private void resetBackgroundOfAllFields() {
         for (final Label label : this.labels) {
             if ((boolean) label.getProperties().get(CONSTANT_FIELD)) {
@@ -287,6 +321,9 @@ public class SudokuController extends AbstractController {
         }
     }
 
+    /**
+     * return to the main window
+     */
     public void main() {
         final Stage stage = getStage();
         final Scene mainScene = FXUtil.getSceneFromFXML("main", stage);
@@ -296,6 +333,9 @@ public class SudokuController extends AbstractController {
         stage.setScene(mainScene);
     }
 
+    /**
+     * solve whole sudoku
+     */
     public void solve() {
         for (final Label label : this.labels) {
             if ((boolean) label.getProperties().get(CONSTANT_FIELD)) {
@@ -306,6 +346,9 @@ public class SudokuController extends AbstractController {
         }
     }
 
+    /**
+     * clear all field that are not defined constant
+     */
     public void clear() {
         for (final Label label : this.labels) {
             if ((boolean) label.getProperties().get(CONSTANT_FIELD)) {
@@ -315,6 +358,9 @@ public class SudokuController extends AbstractController {
         }
     }
 
+    /**
+     * check if the sudoku is valid
+     */
     public void check() {
         final Alert alert = new Alert(Alert.AlertType.INFORMATION);
         alert.setTitle("Check");
@@ -323,6 +369,9 @@ public class SudokuController extends AbstractController {
         alert.showAndWait();
     }
 
+    /**
+     * show save dialog, save model via JAXB to the defined folder
+     */
     public void save() {
         final FileChooser fileChooser = new FileChooser();
         fileChooser.setTitle("Save jSudoku to File");
@@ -337,6 +386,11 @@ public class SudokuController extends AbstractController {
         }
     }
 
+    /**
+     * show choose file dialog, when JAXB cannot read the file, we will show an alert
+     * and reopen the dialog for another tentative
+     * @return JsudokuType loaded model from file
+     */
     private JsudokuType chooseFile() {
         JsudokuType jsudokuType;
         for (; ; ) {
@@ -360,6 +414,10 @@ public class SudokuController extends AbstractController {
         }
     }
 
+    /**
+     * select label by key naviagtion
+     * @param keyCode pressed key up, left, down, right
+     */
     private void select(final KeyCode keyCode) {
         final Label label = next(keyCode);
 
@@ -368,12 +426,20 @@ public class SudokuController extends AbstractController {
         }
     }
 
+    /**
+     * mark label as selected
+     * @param label to mark
+     */
     private void select(final Label label) {
         selectedLabel = label;
         resetBackgroundOfAllFields();
         label.setStyle("-fx-background-color: blue;");
     }
 
+    /**
+     * @param keyCode pressed key up, left, down, right
+     * @return the next Label that is not an read only field
+     */
     private Label next(final KeyCode keyCode) {
         int row = (int) selectedLabel.getProperties().get(ROW_INDEX);
         int column = (int) selectedLabel.getProperties().get(COLUMN_INDEX);
@@ -414,6 +480,9 @@ public class SudokuController extends AbstractController {
         }
     }
 
+    /**
+     * bind view to the model
+     */
     private void bind() {
         bind(labelOfGroup0Field0, jsudoku.getGroup0().getField0(), 0, 0);
         bind(labelOfGroup0Field1, jsudoku.getGroup0().getField1(), 0, 1);

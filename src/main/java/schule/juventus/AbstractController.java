@@ -1,25 +1,32 @@
 package schule.juventus;
 
-import javafx.fxml.FXML;
-import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
+/**
+ * abstract controller for javaFX Controller.
+ */
 public abstract class AbstractController {
 
-    @FXML
-    AnchorPane anchorPane;
-
+    /**
+     * The Stage.
+     */
     Stage stage;
 
+    /**
+     * After initialize.
+     *
+     * @param stage the stage
+     */
     public void afterInitialize(final Stage stage) {
         this.stage = stage;
     }
 
+    /**
+     * Gets stage.
+     *
+     * @return the stage
+     */
     public Stage getStage() {
-        return (Stage) anchorPane.getScene().getWindow();
-    }
-
-    public AnchorPane getAnchorPane() {
-        return anchorPane;
+        return stage;
     }
 }

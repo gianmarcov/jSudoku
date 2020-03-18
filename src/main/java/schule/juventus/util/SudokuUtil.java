@@ -2,8 +2,17 @@ package schule.juventus.util;
 
 import schule.juventus.xml.*;
 
+/**
+ * The type Sudoku util.
+ */
 public class SudokuUtil {
 
+    /**
+     * check sudoku.
+     *
+     * @param jsudoku the jsudoku
+     * @return the string
+     */
     public static String checkSudoku(final JsudokuType jsudoku) {
         final StringBuilder stringBuilder = new StringBuilder();
         if(!SudokuUtil.validateGroup(jsudoku.getGroup0())) {
@@ -95,10 +104,24 @@ public class SudokuUtil {
         return stringBuilder.toString();
     }
 
+    /**
+     * validate group, return true or false as boolean.
+     *
+     * @param group the group
+     * @return the boolean
+     */
     public static boolean validateGroup(final GroupType group) {
         return checkFieldValueNotEqual(group.getField0(), group.getField1(), group.getField2(), group.getField3(), group.getField4(), group.getField5(), group.getField6(), group.getField7(), group.getField8());
     }
 
+    /**
+     * validate vertical first line, return true or false as boolean.
+     *
+     * @param groupA the group a
+     * @param groupB the group b
+     * @param groupC the group c
+     * @return the , return true or false as boolean.
+     */
     public static boolean validateVerticalFirstLine(final GroupType groupA, final GroupType groupB, final GroupType groupC) {
         return checkFieldValueNotEqual(
                 groupA.getField0(), groupA.getField1(), groupA.getField2(),
@@ -106,6 +129,14 @@ public class SudokuUtil {
                 groupC.getField0(), groupC.getField1(), groupC.getField2());
     }
 
+    /**
+     * validate vertical secound line of sudoku, return true or false as boolean.
+     *
+     * @param groupA the group a
+     * @param groupB the group b
+     * @param groupC the group c
+     * @return the boolean
+     */
     public static boolean validateVerticalSecoundLine(final GroupType groupA, final GroupType groupB, final GroupType groupC) {
         return checkFieldValueNotEqual(
                 groupA.getField3(), groupA.getField4(), groupA.getField5(),
@@ -113,6 +144,14 @@ public class SudokuUtil {
                 groupC.getField3(), groupC.getField4(), groupC.getField5());
     }
 
+    /**
+     * validate vertical third line, return true or false as boolean.
+     *
+     * @param groupA the group a
+     * @param groupB the group b
+     * @param groupC the group c
+     * @return the boolean
+     */
     public static boolean validateVerticalThirdLine(final GroupType groupA, final GroupType groupB, final GroupType groupC) {
         return checkFieldValueNotEqual(
                 groupA.getField6(), groupA.getField7(), groupA.getField8(),
@@ -120,6 +159,14 @@ public class SudokuUtil {
                 groupC.getField6(), groupC.getField7(), groupC.getField8());
     }
 
+    /**
+     * validate horizontal first line, return true or false as boolean.
+     *
+     * @param groupA the group a
+     * @param groupB the group b
+     * @param groupC the group c
+     * @return the boolean
+     */
     public static boolean validateHorizontalFirstLine(final GroupType groupA, final GroupType groupB, final GroupType groupC) {
         return checkFieldValueNotEqual(
                 groupA.getField0(), groupA.getField3(), groupA.getField6(),
@@ -127,6 +174,14 @@ public class SudokuUtil {
                 groupC.getField0(), groupC.getField3(), groupC.getField6());
     }
 
+    /**
+     * validate horizontal secound line, return true or false as boolean.
+     *
+     * @param groupA the group a
+     * @param groupB the group b
+     * @param groupC the group c
+     * @return the boolean
+     */
     public static boolean validateHorizontalSecoundLine(final GroupType groupA, final GroupType groupB, final GroupType groupC) {
         return checkFieldValueNotEqual(
                 groupA.getField1(), groupA.getField4(), groupA.getField7(),
@@ -134,6 +189,14 @@ public class SudokuUtil {
                 groupC.getField1(), groupC.getField4(), groupC.getField7());
     }
 
+    /**
+     * validate horizontal third line, return true or false as boolean.
+     *
+     * @param groupA the group a
+     * @param groupB the group b
+     * @param groupC the group c
+     * @return the boolean
+     */
     public static boolean validateHorizontalThirdLine(final GroupType groupA, final GroupType groupB, final GroupType groupC) {
         return checkFieldValueNotEqual(
                 groupA.getField2(), groupA.getField5(), groupA.getField8(),
@@ -141,14 +204,20 @@ public class SudokuUtil {
                 groupC.getField2(), groupC.getField5(), groupC.getField8());
     }
 
+    /**
+     * Check field value not equal, return true or false as boolean.
+     *
+     * @param fields the fields
+     * @return the boolean
+     */
     public static boolean checkFieldValueNotEqual(final FieldType... fields) {
-        for(final FieldType fieldOfFieldsToValidate : fields) {
+        for(final FieldType fieldOfFieldsTovalidate : fields) {
             for (final FieldType fieldOfFields : fields) {
-                if(fieldOfFieldsToValidate == fieldOfFields) {
+                if(fieldOfFieldsTovalidate == fieldOfFields) {
                     continue;
                 }
 
-                if(checkFieldValueNotEqual(fieldOfFieldsToValidate, fieldOfFields)) {
+                if(checkFieldValueNotEqual(fieldOfFieldsTovalidate, fieldOfFields)) {
                     continue;
                 } else {
                     return false;
@@ -159,6 +228,13 @@ public class SudokuUtil {
         return true;
     }
 
+    /**
+     * Check field value not equal, return true or false as boolean.
+     *
+     * @param fieldA the field a
+     * @param fieldB the field b
+     * @return the boolean
+     */
     public static boolean checkFieldValueNotEqual(final FieldType fieldA, final FieldType fieldB) {
         return !fieldA.getValue().get().equals(fieldB.getValue().get());
     }

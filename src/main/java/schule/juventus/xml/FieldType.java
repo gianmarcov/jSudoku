@@ -6,13 +6,25 @@ import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlValue;
 import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
+/**
+ * The type Field type.
+ */
 public abstract class FieldType {
+    /**
+     * The Value.
+     */
     @XmlValue
     @XmlJavaTypeAdapter(StringPropertyAdapter.class)
     protected StringProperty value;
+    /**
+     * The Predefined.
+     */
     @XmlAttribute(name = "predefined", required = true)
     @XmlJavaTypeAdapter(StringPropertyAdapter.class)
     protected StringProperty predefined;
+    /**
+     * The Constant.
+     */
     @XmlAttribute(name = "constant", required = true)
     @XmlJavaTypeAdapter(StringPropertyAdapter.class)
     protected StringProperty constant;
@@ -20,10 +32,7 @@ public abstract class FieldType {
     /**
      * Gets the value of the value property.
      *
-     * @return
-     *     possible object is
-     *     {@link String }
-     *
+     * @return possible      object is     {@link String }
      */
     public StringProperty getValue() {
         return value;
@@ -32,10 +41,7 @@ public abstract class FieldType {
     /**
      * Sets the value of the value property.
      *
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *
+     * @param value allowed object is     {@link String }
      */
     public void setValue(String value) {
         this.value.setValue(value);
@@ -44,10 +50,7 @@ public abstract class FieldType {
     /**
      * Gets the value of the predefined property.
      *
-     * @return
-     *     possible object is
-     *     {@link String }
-     *
+     * @return possible      object is     {@link String }
      */
     public StringProperty getPredefined() {
         return predefined;
@@ -56,10 +59,7 @@ public abstract class FieldType {
     /**
      * Sets the value of the predefined property.
      *
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *
+     * @param value allowed object is     {@link String }
      */
     public void setPredefined(String value) {
         this.predefined.setValue(value);
@@ -68,10 +68,7 @@ public abstract class FieldType {
     /**
      * Gets the value of the constant property.
      *
-     * @return
-     *     possible object is
-     *     {@link String }
-     *
+     * @return possible      object is     {@link String }
      */
     public StringProperty getConstant() {
         return constant;
@@ -80,10 +77,7 @@ public abstract class FieldType {
     /**
      * Sets the value of the constant property.
      *
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *
+     * @param value allowed object is     {@link String }
      */
     public void setConstant(String value) {
         this.constant.setValue(value);

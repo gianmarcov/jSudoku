@@ -7,6 +7,9 @@ import org.apache.log4j.Logger;
 import schule.juventus.util.FXUtil;
 import java.io.IOException;
 
+/**
+ * jSudoku application.
+ */
 public class JSudokuApplication extends Application {
     final static Logger logger = Logger.getLogger(JSudokuApplication.class);
 
@@ -24,7 +27,11 @@ public class JSudokuApplication extends Application {
     }
 
 
-
+    /**
+     * The entry point of application.
+     *
+     * @param parameters the input arguments
+     */
     public static void main(String[] parameters) {
         launch(parameters);
     }

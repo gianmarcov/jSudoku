@@ -1,0 +1,206 @@
+<?schule.juventus.xml version="1.0" encoding="UTF-8"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="jsudokuType" type="jsudokuType"/>
+  <xs:complexType name="field0Type">
+    <xs:simpleContent>
+      <xs:extension base="xs:string">
+        <xs:attribute type="xs:string" name="predefined" use="required"/>
+        <xs:attribute type="xs:string" name="constant" use="required"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="field1Type">
+    <xs:simpleContent>
+      <xs:extension base="xs:string">
+        <xs:attribute type="xs:string" name="predefined" use="required"/>
+        <xs:attribute type="xs:string" name="constant" use="required"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="field2Type">
+    <xs:simpleContent>
+      <xs:extension base="xs:string">
+        <xs:attribute type="xs:string" name="predefined" use="required"/>
+        <xs:attribute type="xs:string" name="constant" use="required"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="field3Type">
+    <xs:simpleContent>
+      <xs:extension base="xs:string">
+        <xs:attribute type="xs:string" name="predefined" use="required"/>
+        <xs:attribute type="xs:string" name="constant" use="required"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="field4Type">
+    <xs:simpleContent>
+      <xs:extension base="xs:string">
+        <xs:attribute type="xs:string" name="predefined" use="required"/>
+        <xs:attribute type="xs:string" name="constant" use="required"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="field5Type">
+    <xs:simpleContent>
+      <xs:extension base="xs:string">
+        <xs:attribute type="xs:string" name="predefined" use="required"/>
+        <xs:attribute type="xs:string" name="constant" use="required"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="field6Type">
+    <xs:simpleContent>
+      <xs:extension base="xs:string">
+        <xs:attribute type="xs:string" name="predefined" use="required"/>
+        <xs:attribute type="xs:string" name="constant" use="required"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="field7Type">
+    <xs:simpleContent>
+      <xs:extension base="xs:string">
+        <xs:attribute type="xs:string" name="predefined" use="required"/>
+        <xs:attribute type="xs:string" name="constant" use="required"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="field8Type">
+    <xs:simpleContent>
+      <xs:extension base="xs:string">
+        <xs:attribute type="xs:string" name="predefined" use="required"/>
+        <xs:attribute type="xs:string" name="constant" use="required"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="group0Type">
+    <xs:sequence>
+      <xs:element type="field0Type" name="field0"/>
+      <xs:element type="field1Type" name="field1"/>
+      <xs:element type="field2Type" name="field2"/>
+      <xs:element type="field3Type" name="field3"/>
+      <xs:element type="field4Type" name="field4"/>
+      <xs:element type="field5Type" name="field5"/>
+      <xs:element type="field6Type" name="field6"/>
+      <xs:element type="field7Type" name="field7"/>
+      <xs:element type="field8Type" name="field8"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="group1Type">
+    <xs:sequence>
+      <xs:element type="field0Type" name="field0"/>
+      <xs:element type="field1Type" name="field1"/>
+      <xs:element type="field2Type" name="field2"/>
+      <xs:element type="field3Type" name="field3"/>
+      <xs:element type="field4Type" name="field4"/>
+      <xs:element type="field5Type" name="field5"/>
+      <xs:element type="field6Type" name="field6"/>
+      <xs:element type="field7Type" name="field7"/>
+      <xs:element type="field8Type" name="field8"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="group2Type">
+    <xs:sequence>
+      <xs:element type="field0Type" name="field0"/>
+      <xs:element type="field1Type" name="field1"/>
+      <xs:element type="field2Type" name="field2"/>
+      <xs:element type="field3Type" name="field3"/>
+      <xs:element type="field4Type" name="field4"/>
+      <xs:element type="field5Type" name="field5"/>
+      <xs:element type="field6Type" name="field6"/>
+      <xs:element type="field7Type" name="field7"/>
+      <xs:element type="field8Type" name="field8"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="group3Type">
+    <xs:sequence>
+      <xs:element type="field0Type" name="field0"/>
+      <xs:element type="field1Type" name="field1"/>
+      <xs:element type="field2Type" name="field2"/>
+      <xs:element type="field3Type" name="field3"/>
+      <xs:element type="field4Type" name="field4"/>
+      <xs:element type="field5Type" name="field5"/>
+      <xs:element type="field6Type" name="field6"/>
+      <xs:element type="field7Type" name="field7"/>
+      <xs:element type="field8Type" name="field8"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="group4Type">
+    <xs:sequence>
+      <xs:element type="field0Type" name="field0"/>
+      <xs:element type="field1Type" name="field1"/>
+      <xs:element type="field2Type" name="field2"/>
+      <xs:element type="field3Type" name="field3"/>
+      <xs:element type="field4Type" name="field4"/>
+      <xs:element type="field5Type" name="field5"/>
+      <xs:element type="field6Type" name="field6"/>
+      <xs:element type="field7Type" name="field7"/>
+      <xs:element type="field8Type" name="field8"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="group5Type">
+    <xs:sequence>
+      <xs:element type="field0Type" name="field0"/>
+      <xs:element type="field1Type" name="field1"/>
+      <xs:element type="field2Type" name="field2"/>
+      <xs:element type="field3Type" name="field3"/>
+      <xs:element type="field4Type" name="field4"/>
+      <xs:element type="field5Type" name="field5"/>
+      <xs:element type="field6Type" name="field6"/>
+      <xs:element type="field7Type" name="field7"/>
+      <xs:element type="field8Type" name="field8"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="group6Type">
+    <xs:sequence>
+      <xs:element type="field0Type" name="field0"/>
+      <xs:element type="field1Type" name="field1"/>
+      <xs:element type="field2Type" name="field2"/>
+      <xs:element type="field3Type" name="field3"/>
+      <xs:element type="field4Type" name="field4"/>
+      <xs:element type="field5Type" name="field5"/>
+      <xs:element type="field6Type" name="field6"/>
+      <xs:element type="field7Type" name="field7"/>
+      <xs:element type="field8Type" name="field8"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="group7Type">
+    <xs:sequence>
+      <xs:element type="field0Type" name="field0"/>
+      <xs:element type="field1Type" name="field1"/>
+      <xs:element type="field2Type" name="field2"/>
+      <xs:element type="field3Type" name="field3"/>
+      <xs:element type="field4Type" name="field4"/>
+      <xs:element type="field5Type" name="field5"/>
+      <xs:element type="field6Type" name="field6"/>
+      <xs:element type="field7Type" name="field7"/>
+      <xs:element type="field8Type" name="field8"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="group8Type">
+    <xs:sequence>
+      <xs:element type="field0Type" name="field0"/>
+      <xs:element type="field1Type" name="field1"/>
+      <xs:element type="field2Type" name="field2"/>
+      <xs:element type="field3Type" name="field3"/>
+      <xs:element type="field4Type" name="field4"/>
+      <xs:element type="field5Type" name="field5"/>
+      <xs:element type="field6Type" name="field6"/>
+      <xs:element type="field7Type" name="field7"/>
+      <xs:element type="field8Type" name="field8"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="jsudokuType">
+    <xs:sequence>
+      <xs:element type="group0Type" name="group0"/>
+      <xs:element type="group1Type" name="group1"/>
+      <xs:element type="group2Type" name="group2"/>
+      <xs:element type="group3Type" name="group3"/>
+      <xs:element type="group4Type" name="group4"/>
+      <xs:element type="group5Type" name="group5"/>
+      <xs:element type="group6Type" name="group6"/>
+      <xs:element type="group7Type" name="group7"/>
+      <xs:element type="group8Type" name="group8"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

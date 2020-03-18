@@ -23,6 +23,7 @@ public class MainController extends AbstractController {
      * Start.
      */
     public void start() {
+        logger.info("navigate to Sudoku");
         final Scene sudokuScene = FXUtil.getSceneFromFXML("sudoku", getStage());
         final Stage stage = getStage();
 

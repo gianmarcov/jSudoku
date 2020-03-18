@@ -254,9 +254,6 @@ public class SudokuController extends AbstractController {
         this.jsudoku = chooseFile();
         bind();
 
-        logger.info(this.getClass().getName() + " initialized");
-
-
         stage.addEventHandler(KeyEvent.KEY_PRESSED, keyEvent -> {
             if (selectedLabel != null) {
                 if (keyEvent.getCode() == KeyCode.ESCAPE) {
@@ -282,10 +279,10 @@ public class SudokuController extends AbstractController {
 
     /**
      * bind view to model
-     * @param label
-     * @param fieldType
-     * @param row
-     * @param column
+     * @param label view
+     * @param fieldType model
+     * @param row number of row
+     * @param column number of column
      */
     private void bind(final Label label, final FieldType fieldType, final int row, final int column) {
         final boolean isConstant = fieldType.getPredefined().get().equalsIgnoreCase(TRUE);
@@ -297,9 +294,7 @@ public class SudokuController extends AbstractController {
             fieldType.getValue().setValue(fieldType.getConstant().getValue());
         } else {
             label.textProperty().bindBidirectional(fieldType.getValue());
-            label.addEventHandler(MouseEvent.MOUSE_CLICKED, mouseEvent -> {
-                select(label);
-            });
+            label.addEventHandler(MouseEvent.MOUSE_CLICKED, mouseEvent -> select(label));
             label.getProperties().put(CONSTANT_FIELD, false);
         }
 
@@ -325,6 +320,8 @@ public class SudokuController extends AbstractController {
      * return to the main window
      */
     public void main() {
+        logger.info("navigate to main");
+
         final Stage stage = getStage();
         final Scene mainScene = FXUtil.getSceneFromFXML("main", stage);
 
@@ -337,6 +334,8 @@ public class SudokuController extends AbstractController {
      * solve whole sudoku
      */
     public void solve() {
+        logger.info("solve sudoku");
+
         for (final Label label : this.labels) {
             if ((boolean) label.getProperties().get(CONSTANT_FIELD)) {
                 continue;
@@ -350,6 +349,8 @@ public class SudokuController extends AbstractController {
      * clear all field that are not defined constant
      */
     public void clear() {
+        logger.info("clear all fields...");
+
         for (final Label label : this.labels) {
             if ((boolean) label.getProperties().get(CONSTANT_FIELD)) {
                 continue;
@@ -362,6 +363,8 @@ public class SudokuController extends AbstractController {
      * check if the sudoku is valid
      */
     public void check() {
+        logger.info("check sudoku if is valid");
+
         final Alert alert = new Alert(Alert.AlertType.INFORMATION);
         alert.setTitle("Check");
         alert.setHeaderText("Results:");
@@ -373,6 +376,8 @@ public class SudokuController extends AbstractController {
      * show save dialog, save model via JAXB to the defined folder
      */
     public void save() {
+        logger.info("save sudoku");
+
         final FileChooser fileChooser = new FileChooser();
         fileChooser.setTitle("Save jSudoku to File");
         fileChooser.getExtensionFilters().add(new FileChooser.ExtensionFilter("XML Files", "*.xml"));
@@ -383,6 +388,7 @@ public class SudokuController extends AbstractController {
                 file = new File(file.getAbsolutePath() + ".xml");
             }
             JAXBUtil.marshal(file, JsudokuType.class, jsudoku);
+            logger.info("file saved");
         }
     }
 
@@ -392,6 +398,7 @@ public class SudokuController extends AbstractController {
      * @return JsudokuType loaded model from file
      */
     private JsudokuType chooseFile() {
+        logger.info("choose jSudoku file");
         JsudokuType jsudokuType;
         for (; ; ) {
             final FileChooser fileChooser = new FileChooser();
@@ -405,6 +412,7 @@ public class SudokuController extends AbstractController {
             if (jsudokuType != null) {
                 return jsudokuType;
             } else {
+                logger.error("File is not a valid jSudoku XML");
                 final Alert alert = new Alert(Alert.AlertType.ERROR);
                 alert.setTitle("Error");
                 alert.setHeaderText("Cannot read file:");
@@ -472,9 +480,7 @@ public class SudokuController extends AbstractController {
                 }
             }
 
-            if ((boolean) label.getProperties().get(CONSTANT_FIELD)) {
-                continue;
-            } else {
+            if (label != null && !(boolean) label.getProperties().get(CONSTANT_FIELD)) {
                 return label;
             }
         }
@@ -484,6 +490,8 @@ public class SudokuController extends AbstractController {
      * bind view to the model
      */
     private void bind() {
+        logger.info("bind view to model");
+
         bind(labelOfGroup0Field0, jsudoku.getGroup0().getField0(), 0, 0);
         bind(labelOfGroup0Field1, jsudoku.getGroup0().getField1(), 0, 1);
         bind(labelOfGroup0Field2, jsudoku.getGroup0().getField2(), 0, 2);

@@ -40,8 +40,6 @@ public class JAXBUtil {
             final Marshaller jaxbMarshaller = jaxbContext.createMarshaller();
             jaxbMarshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, Boolean.TRUE);
             jaxbMarshaller.marshal(object, file);
-        } catch (PropertyException e) {
-            e.printStackTrace();
         } catch (JAXBException e) {
             e.printStackTrace();
         }

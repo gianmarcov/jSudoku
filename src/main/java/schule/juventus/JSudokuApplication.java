@@ -17,15 +17,12 @@ public class JSudokuApplication extends Application {
     }
 
     @Override public void start(Stage primaryStage) throws IOException {
+        logger.info("jSudoku started");
         final Scene scene = FXUtil.getSceneFromFXML("main", primaryStage);
         primaryStage.setTitle("jSudoku");
         primaryStage.setScene(scene);
         primaryStage.show();
     }
-
-    @Override public void stop() {
-    }
-
 
     /**
      * The entry point of application.

@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<jsudoku>
+    <group0>
+        <field0 predefined="false" constant="1"/>
+        <field1 predefined="true" constant="4"/>
+        <field2 predefined="true" constant="9"/>
+        <field3 predefined="true" constant="6"/>
+        <field4 predefined="true" constant="8"/>
+        <field5 predefined="false" constant="3"/>
+        <field6 predefined="false" constant="5"/>
+        <field7 predefined="true" constant="2"/>
+        <field8 predefined="false" constant="7"/>
+    </group0>
+    <group1>
+        <field0 predefined="false" constant="8"/>
+        <field1 predefined="false" constant="2"/>
+        <field2 predefined="false" constant="6"/>
+        <field3 predefined="false" constant="5"/>
+        <field4 predefined="false" constant="1"/>
+        <field5 predefined="true" constant="7"/>
+        <field6 predefined="true" constant="9"/>
+        <field7 predefined="false" constant="4"/>
+        <field8 predefined="true" constant="3"/>
+    </group1>
+    <group2>
+        <field0 predefined="false" constant="7"/>
+        <field1 predefined="true" constant="3"/>
+        <field2 predefined="false" constant="5"/>
+        <field3 predefined="false" constant="4"/>
+        <field4 predefined="false" constant="2"/>
+        <field5 predefined="false" constant="9"/>
+        <field6 predefined="true" constant="6"/>
+        <field7 predefined="false" constant="1"/>
+        <field8 predefined="false" constant="8"/>
+    </group2>
+    <group3>
+        <field0 predefined="true" constant="9"/>
+        <field1 predefined="false" constant="6"/>
+        <field2 predefined="false" constant="2"/>
+        <field3 predefined="false" constant="3"/>
+        <field4 predefined="false" constant="5"/>
+        <field5 predefined="true" constant="8"/>
+        <field6 predefined="false" constant="7"/>
+        <field7 predefined="true" constant="1"/>
+        <field8 predefined="false" constant="4"/>
+    </group3>
+    <group4>
+        <field0 predefined="true" constant="4"/>
+        <field1 predefined="false" constant="3"/>
+        <field2 predefined="true" constant="5"/>
+        <field3 predefined="false" constant="2"/>
+        <field4 predefined="false" constant="7"/>
+        <field5 predefined="false" constant="1"/>
+        <field6 predefined="true" constant="6"/>
+        <field7 predefined="false" constant="8"/>
+        <field8 predefined="true" constant="9"/>
+    </group4>
+    <group5>
+        <field0 predefined="false" constant="1"/>
+        <field1 predefined="true" constant="8"/>
+        <field2 predefined="false" constant="7"/>
+        <field3 predefined="true" constant="9"/>
+        <field4 predefined="false" constant="4"/>
+        <field5 predefined="false" constant="6"/>
+        <field6 predefined="false" constant="3"/>
+        <field7 predefined="false" constant="5"/>
+        <field8 predefined="true" constant="2"/>
+    </group5>
+    <group6>
+        <field0 predefined="false" constant="4"/>
+        <field1 predefined="false" constant="3"/>
+        <field2 predefined="true" constant="5"/>
+        <field3 predefined="false" constant="2"/>
+        <field4 predefined="false" constant="9"/>
+        <field5 predefined="false" constant="1"/>
+        <field6 predefined="false" constant="8"/>
+        <field7 predefined="true" constant="7"/>
+        <field8 predefined="false" constant="6"/>
+    </group6>
+    <group7>
+        <field0 predefined="false" constant="9"/>
+        <field1 predefined="true" constant="6"/>
+        <field2 predefined="true" constant="8"/>
+        <field3 predefined="true" constant="7"/>
+        <field4 predefined="false" constant="5"/>
+        <field5 predefined="false" constant="3"/>
+        <field6 predefined="false" constant="1"/>
+        <field7 predefined="false" constant="4"/>
+        <field8 predefined="true" constant="2"/>
+    </group7>
+    <group8>
+        <field0 predefined="false" constant="2"/>
+        <field1 predefined="true" constant="7"/>
+        <field2 predefined="false" constant="1"/>
+        <field3 predefined="false" constant="8"/>
+        <field4 predefined="true" constant="6"/>
+        <field5 predefined="true" constant="4"/>
+        <field6 predefined="true" constant="5"/>
+        <field7 predefined="true" constant="9"/>
+        <field8 predefined="false" constant="3"/>
+    </group8>
+</jsudoku>

@@ -1,5 +1,6 @@
 package schule.juventus.xml;
 
+import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
 
 import javax.xml.bind.annotation.XmlAttribute;
@@ -35,6 +36,9 @@ public abstract class FieldType {
      * @return possible      object is     {@link String }
      */
     public StringProperty getValue() {
+        if(value == null) {
+            value = new SimpleStringProperty();
+        }
         return value;
     }
 
@@ -53,6 +57,9 @@ public abstract class FieldType {
      * @return possible      object is     {@link String }
      */
     public StringProperty getPredefined() {
+        if(predefined == null) {
+            predefined = new SimpleStringProperty();
+        }
         return predefined;
     }
 
@@ -71,6 +78,9 @@ public abstract class FieldType {
      * @return possible      object is     {@link String }
      */
     public StringProperty getConstant() {
+        if(constant == null) {
+            constant = new SimpleStringProperty();
+        }
         return constant;
     }
 
